@@ -1,0 +1,195 @@
+.animated-circle {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 42%);
+  border-radius: 50%;
+  background: #210038;
+  box-shadow:
+    0 0 14px rgb(114 66 210 / 65%),
+    inset 0 0 10px #a64dff;
+}
+
+.animated-sphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 68% 18%, #fff 0%, #d9b5ff 5%, transparent 22%),
+    radial-gradient(
+      circle at 25% 72%,
+      #762cff 0%,
+      #4b0a8f 36%,
+      transparent 68%
+    ),
+    radial-gradient(circle at 50% 50%, #41006b 0%, #210038 58%, #0d0018 100%);
+}
+
+.glow {
+  position: absolute;
+  width: 155%;
+  height: 155%;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.85;
+  mix-blend-mode: screen;
+}
+
+.glow-one {
+  top: -20%;
+  left: -25%;
+  background: radial-gradient(
+    circle at 30% 40%,
+    #762cff 0%,
+    #4b0a8f 30%,
+    transparent 60%
+  );
+}
+
+.glow-two {
+  right: -30%;
+  bottom: -30%;
+  background: radial-gradient(
+    circle at 75% 70%,
+    #fff 0%,
+    #e09cff 8%,
+    #9c42ff 20%,
+    transparent 45%
+  );
+}
+
+.glow-three {
+  top: -25%;
+  right: -30%;
+  background: radial-gradient(
+    circle at 58% 42%,
+    #70e4ff 0%,
+    #5364ff 24%,
+    #7242d2 42%,
+    transparent 68%
+  );
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 34px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 65%);
+  filter: blur(7px);
+}
+
+.playing .glow-one {
+  animation: wave-purple 5s ease-in-out infinite alternate;
+}
+
+.playing .glow-two {
+  animation: wave-pink 6s ease-in-out infinite alternate;
+}
+
+.playing .glow-three {
+  animation: wave-blue 7s ease-in-out infinite alternate;
+}
+
+.playing .highlight {
+  animation: highlight-drift 4s ease-in-out infinite alternate;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  padding: 0 0 0 1px;
+  place-items: center;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  background: rgb(255 255 255 / 20%);
+  color: white;
+  font-size: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+.play-button:hover {
+  background: rgb(255 255 255 / 38%);
+}
+
+.play-glyph {
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid white;
+}
+
+.pause-glyph {
+  width: 7px;
+  height: 9px;
+  margin-left: 0;
+  border: 0;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+}
+
+@keyframes glow-drift-one {
+  to {
+    transform: translate(6px, 5px) scale(1.12);
+  }
+}
+
+@keyframes glow-drift-two {
+  to {
+    transform: translate(-6px, -5px) scale(1.1);
+  }
+}
+
+@keyframes highlight-drift {
+  to {
+    transform: translate(12px, 5px) scale(1.1);
+  }
+}
+
+@keyframes wave-purple {
+  0% {
+    transform: translate(-7px, -4px) scale(0.94) rotate(-8deg);
+  }
+  50% {
+    transform: translate(6px, 4px) scale(1.12) rotate(8deg);
+  }
+  100% {
+    transform: translate(-2px, 7px) scale(1.02) rotate(-3deg);
+  }
+}
+
+@keyframes wave-pink {
+  0% {
+    transform: translate(6px, 7px) scale(1.08) rotate(5deg);
+  }
+  50% {
+    transform: translate(-7px, -5px) scale(0.92) rotate(-9deg);
+  }
+  100% {
+    transform: translate(3px, -2px) scale(1.12) rotate(7deg);
+  }
+}
+
+@keyframes wave-blue {
+  0% {
+    transform: translate(8px, -6px) scale(0.9) rotate(10deg);
+  }
+  50% {
+    transform: translate(-5px, 7px) scale(1.13) rotate(-7deg);
+  }
+  100% {
+    transform: translate(2px, 2px) scale(0.98) rotate(4deg);
+  }
+}

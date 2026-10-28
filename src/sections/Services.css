@@ -1,0 +1,320 @@
+.services-page {
+  width: 100%;
+  overflow: hidden;
+  background: #140c1c;
+}
+
+.services-banner {
+  display: flex;
+  height: clamp(88px, 15vw, 120px);
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: clamp(15px, 2vw, 35px);
+  overflow: hidden;
+  padding-inline: 8px;
+  background: #140c1c;
+}
+
+.services-title {
+  margin: 0;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(2rem, 8.8vw, 7.5rem);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.services-banner .circular-text {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+}
+
+.services-banner .circular-text-ring span {
+  font-size: 6px;
+  letter-spacing: 0;
+  text-shadow: 0 0 3px rgb(190 150 255 / 95%);
+}
+
+.services-banner .animated-circle {
+  width: 56px;
+  height: 56px;
+}
+
+.services-banner .highlight {
+  left: 16px;
+  width: 22px;
+  height: 12px;
+}
+
+.services-banner .play-button {
+  width: 18px;
+  height: 18px;
+  font-size: 6px;
+}
+
+.services-banner .pause-glyph {
+  width: 6px;
+  height: 7px;
+}
+
+.services-hero {
+  position: relative;
+  min-height: max(600px, calc(100vh - 4rem));
+  overflow: hidden;
+  background: #140c1c;
+}
+
+.services-portrait {
+  position: absolute;
+  top: 52px;
+  left: calc(50% - 76px);
+  width: min(456px, 64vw);
+  height: min(520px, 72vw);
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 50% 50% 0 0;
+  background: #477bc8;
+}
+
+.services-portrait > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.services-portrait-fade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 28%;
+  background: linear-gradient(transparent, #140c1c);
+}
+
+.services-callout-assets {
+  position: absolute;
+  z-index: 2;
+  top: 155px;
+  left: calc(50% - 224px);
+  width: 200px;
+}
+
+.services-callout-card {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.services-callout-pointer {
+  position: absolute;
+  bottom: -22px;
+  left: -10%;
+  width: 27px;
+  height: auto;
+}
+
+.services-callout-link {
+  position: absolute;
+  bottom: -55px;
+  left: -44%;
+  width: 67px;
+  height: auto;
+}
+
+/* Layout for the portrait and description row only. */
+.services-layout-row {
+  display: grid;
+  width: min(calc(100% - 32px), 1020px);
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 220px);
+  align-items: center;
+  gap: clamp(28px, 4vw, 30px);
+  margin-inline: auto;
+  padding: 16px 24px 32px;
+}
+
+.services-hero-in-row {
+  width: auto;
+  min-width: 0;
+  min-height: clamp(380px, 54vw, 600px);
+  overflow: visible;
+}
+
+.services-hero-in-row .services-portrait {
+  top: 50%;
+  left: calc(50% + 60px);
+  width: min(456px, 72%);
+  height: min(520px, calc(100% - 40px));
+  min-height: 0;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+}
+
+.services-hero-in-row .services-portrait > img {
+  border-radius: 50% 50% 0 0;
+}
+
+.services-hero-in-row .services-portrait > .services-callout-assets {
+  top: 20%;
+  left: -21%;
+  width: clamp(115px, 28vw, 200px);
+  z-index: 5;
+}
+
+.services-hero-in-row .services-callout-link {
+  left: -20%;
+}
+
+.services-copy {
+  width: 100%;
+  color: rgb(255 255 255 / 70%);
+}
+
+.services-copy p {
+  max-width: 220px;
+  margin: 0;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.services-experience {
+  margin-top: 10px;
+  border-top: 1px solid rgb(255 255 255 / 7%);
+  border-bottom: 1px solid rgb(255 255 255 / 7%);
+}
+
+.services-experience-stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 3ch;
+  padding: 7px 2px 0;
+}
+
+.services-experience-number {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+  font-variant-numeric: tabular-nums;
+}
+
+.services-experience-caption {
+  align-self: flex-start;
+  margin-top: -2px;
+  color: rgb(255 255 255 / 45%);
+  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  white-space: nowrap;
+}
+
+.services-contact-link {
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin-top: 12px;
+  border-radius: 50%;
+}
+
+.services-contact-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 180ms ease;
+}
+
+.services-contact-link:hover img,
+.services-contact-link:focus-visible img {
+  transform: translate(2px, -2px);
+}
+
+.services-contact-link:focus-visible {
+  outline: 2px solid #b780ff;
+  outline-offset: 6px;
+}
+
+@media (max-width: 520px) {
+  .services-banner {
+    gap: 5px;
+  }
+  .services-title {
+    font-size: clamp(1.9rem, 8.6vw, 2.8rem);
+  }
+
+  .services-hero {
+    min-height: max(520px, calc(100vh - 4rem));
+  }
+
+  .services-portrait {
+    top: 38px;
+    left: 50%;
+    width: min(360px, 82vw);
+    height: min(440px, 105vw);
+    min-height: 330px;
+    transform: translateX(-50%);
+  }
+
+  .services-callout-assets {
+    top: clamp(115px, 34vw, 155px);
+    left: 12px;
+    width: clamp(155px, 48vw, 200px);
+  }
+
+  .services-callout-pointer {
+    width: 24px;
+  }
+  .services-callout-link {
+    bottom: -45px;
+    left: -44%;
+    width: 58px;
+  }
+}
+
+@media (max-width: 700px) {
+  .services-layout-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 8px 16px 28px;
+  }
+
+  .services-hero-in-row {
+    width: 100%;
+    min-height: 430px;
+    overflow: visible;
+  }
+
+  .services-hero-in-row .services-portrait {
+    width: min(360px, 72%);
+    height: min(400px, calc(100% - 30px));
+    transform: translate(calc(-50% + 60px), -50%);
+  }
+
+  .services-hero-in-row .services-portrait > .services-callout-assets {
+    top: 20%;
+    left: -22%;
+    width: clamp(115px, 28vw, 150px);
+  }
+
+  .services-hero-in-row .services-callout-link {
+    left: -44%;
+  }
+
+  .services-copy {
+    width: min(100%, 360px);
+  }
+
+  .services-copy p {
+    max-width: none;
+    font-size: 13px;
+  }
+}

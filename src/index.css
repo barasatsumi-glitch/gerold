@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+/* =========================
+   Custom Theme
+========================= */
+
+@theme {
+  /* Fonts */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Colors */
+  --color-body: #140c1c;
+
+  /* Container */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 80rem;
+  --breakpoint-xl: 85rem;
+}
+
+/* =========================
+   Custom Container
+========================= */
+
+@utility container {
+  margin-inline: auto;
+  padding: auto;
+}
+
+/* =========================
+   Base Styles
+========================= */
+
+@layer base {
+  body {
+    @apply bg-body font-poppins;
+  }
+
+  h1 {
+    @apply font-montserrat text-white text-[120px] leading-normal font-semibold;
+  }
+
+  h2 {
+    @apply font-poppins text-[18px] leading-normal font-light text-[#949494];
+  }
+
+  h3 {
+    @apply font-poppins text-[12px] font-light text-[#949494];
+  }
+
+  h4 {
+    @apply font-poppins text-[11px] font-semibold text-black;
+  }
+
+  p {
+    @apply font-poppins text-[11px] leading-normal font-light text-[#949494];
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
